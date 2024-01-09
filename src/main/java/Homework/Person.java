@@ -9,6 +9,27 @@ public class Person {
 
     private int money;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if(age < 0) {
+            throw new IllegalArgumentException("Возраст не может быть отрицательным");
+        }
+        this.age = age;
+    }
+
+
+
     public Person(String name, int age, double height, double weight) {
         this.name = name;
         this.age = age;
