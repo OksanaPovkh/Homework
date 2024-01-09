@@ -1,19 +1,12 @@
 package Homework;
 
-import javax.lang.model.element.Name;
-import java.util.Date;
+import java.time.LocalDate;
 
-public class PensionFund extends Person{
-
+public class PensionFund {
     private String name;
-    private  boolean isStateFund;
-    private Date creationDate;
-
+    private  boolean isState;
+    private LocalDate creationDate;
     private int participantsCount;
-
-    public PensionFund(int money) {
-        super(money);
-    }
 
     public String getName() {
         return name;
@@ -23,18 +16,21 @@ public class PensionFund extends Person{
         this.name = name;
     }
 
-    public boolean isStateFund() {
-        return isStateFund;
+    public boolean isState() {
+        return isState;
     }
 
-    public void setStateFund(boolean stateFund) {
-        isStateFund = stateFund;
+    public void setState(boolean state) {
+        isState = state;
     }
 
-    public Date getCreationDate() {
+    public LocalDate getCreationDate(){
         return creationDate;
     }
 
+    public void setCreationDate(LocalDate creationDate) {
+        this.creationDate = creationDate;
+    }
 
     public int getParticipantsCount() {
         return participantsCount;
@@ -45,10 +41,20 @@ public class PensionFund extends Person{
     }
 
     public void info(){
-        String participantsStr = isStateFund ? participantsCount + "тысяча" : participantsCount + "";
-        System.out.println("Информация о фонде" + name);
-        System.out.println("Государственный:" + isStateFund);
+        String participantsText;
+        if (isState) {
+            participantsText = participantsCount + "тысяч";
+        } else {
+            participantsText = String.valueOf(participantsCount);
+        }
+
+
+
+
+        System.out.println("Информация о фонде" );
+        System.out.println("Название:" + name);
+        System.out.println("Государственный:" + isState);
         System.out.println("Дата создания:" + creationDate);
-        System.out.println("Участников:" + participantsStr);
+        System.out.println("Участников:" + participantsText);
     }
 }
