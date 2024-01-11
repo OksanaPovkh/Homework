@@ -9,6 +9,12 @@ public class Person {
 
     private int money;
 
+    private double die;
+
+    public void die(){
+        System.out.println("Человек погиб");
+    }
+
     public String getName() {
         return name;
     }
