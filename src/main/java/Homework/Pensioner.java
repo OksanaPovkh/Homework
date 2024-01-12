@@ -13,9 +13,10 @@ public class Pensioner extends Person {
 
     @Override
     public void die(int age) {
-            int pension = 0;
 
-            System.out.println("Этот пенсионер умерб он заработал: " + (age - 50) * pension);
+
+        int pension = 0;
+        System.out.println("Этот пенсионер умерб он заработал: " + (age - 50) * pension);
         }
 
 

@@ -10,11 +10,24 @@ public class Worker extends Person {
         super(name, age, height, weight);
     }
 
-    public Worker(int money) {
-        super(money);
+    //public Worker(int money) {
+      //  super(money);
+    //}
+
+    public Worker(int age){
+        super(age);
+
     }
 
-    //@Override
+    public Worker(int age, int minSalary){
+        super(age);
+        this.minSalary = minSalary;
+    }
+
+
+
+
+    @Override
     public void die(int age) {
         System.out.println(" Этот человек не дожил до пенсии");
     }

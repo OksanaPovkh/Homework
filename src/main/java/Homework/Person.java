@@ -7,8 +7,6 @@ public abstract class Person {
     private double height;
     private double weight;
 
-    private int money;
-
     private double die;
 
     public void die(){
@@ -56,7 +54,6 @@ public abstract class Person {
     }
 
     public Person(int money) {
-        this.money = money;
     }
 
     public abstract void die(int age);
